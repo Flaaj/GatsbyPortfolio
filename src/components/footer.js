@@ -6,7 +6,8 @@ const Footer = () => (
             <span className="">Contact me:</span>
             <ul className="contact__list">
                 <li className="contact__element">
-                    <a
+                    <a  
+                        type="email"
                         href="michal.wolek96@gmail.com"
                         className="contact__link"
                     >

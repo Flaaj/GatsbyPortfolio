@@ -12,14 +12,14 @@ import "../styles/main.scss";
 import Header from "./header";
 import Sidebar from "./sidebar";
 import Main from "./main";
-import ThreeJsCanvas from "./threeJsCanvas";
+// import ThreeJsCanvas from "./threeJsCanvas";
 import Head from "./head";
 import Footer from "./footer";
 const Layout = ({ pageTitle, children }) => {
     return (
         <>
             <Head />
-            <ThreeJsCanvas />
+            {/* <ThreeJsCanvas /> */}
             <div className="page-wrapper">
                 <Header pageTitle={pageTitle} />
                 <div className="container">
