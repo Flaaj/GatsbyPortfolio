@@ -5,49 +5,33 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import "../styles/main.scss";
+import Header from "./header";
+import Sidebar from "./sidebar";
+import Main from "./main";
+import ThreeJsCanvas from "./threeJsCanvas";
 
 const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(
-    graphql`
-      query MyQuery {
-        site {
-          siteMetadata {
-            description
-            author
-            title
-          }
-        }
-      }
-    `
-  )
-  const meta = data.site.siteMetadata
-  return (
-    <main className="container">
-      <title>{meta.title}</title>
-      <nav>
-        <div className="logo">{meta.title}</div>
-        <p>{meta.description}</p>
-        <ul className="navLinks">
-          <li className="navLinkItem">
-            <Link to="/" className="navLinkText">Home</Link>
-          </li>
-          <li className="navLinkItem">
-            <Link to="/about" className="navLinkText">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <h1 className="heading">{pageTitle}</h1>
-      {children}
-    </main>
-  );
+    const [starlets, setStarlets] = useState(Array(100).fill({}));
+    return (
+        <>
+            <ThreeJsCanvas />
+            <div className="page-wrapper">
+                <Header pageTitle={pageTitle} />
+                <div className="container">
+                    <Main>{children}</Main>
+                    {/* <Sidebar /> */}
+                </div>
+            </div>
+        </>
+    );
 };
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 export default Layout;

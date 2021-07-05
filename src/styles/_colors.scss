@@ -1,6 +1,12 @@
 $colors: (
     black: #000,
     white: #fff,
+    main: #1b3e42,
+    accent: #bbb,
+    menuText:#eaa3a3,
+    lightText: white,
+    darkText: black,
+    bodyBg: black
 );
 
 @function color($name) {
