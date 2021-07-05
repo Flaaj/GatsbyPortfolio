@@ -20,10 +20,10 @@ export default ThreeJsCanvas;
 const Star = ({ position }) => {
     const mesh = useRef();
     useEffect(() => {
-        mesh.current.t = Math.random();
-        mesh.current.mult = ~~(Math.random() * 10);
-        mesh.current.speed = Math.random();
-        if (mesh.current.speed > 0.99) mesh.current.speed *= 5;
+        mesh.current.t     =    Math.random();
+        mesh.current.mult  = ~~(Math.random() * 10);
+        mesh.current.speed =    Math.random();
+        if      (mesh.current.speed > 0.99)  mesh.current.speed *= 5;
         else if (mesh.current.speed > 0.995) mesh.current.speed *= 25;
     }, []);
 

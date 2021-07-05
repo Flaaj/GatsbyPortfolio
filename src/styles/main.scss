@@ -2,110 +2,201 @@
 @import "colors";
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: color(bodyBg);
-  color: color(lightText);
-  position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: color(bodyBg);
+    color: color(lightText);
+    position: relative;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
 }
 
 .page-wrapper {
-  margin: auto;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    height: 100%;
 }
 
 .header {
-  background-color: color(main);
+    background-color: color(main);
 
-  .container {
-    display: flex;
-    justify-content: flex-end;
-  }
+    .container {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 .page-title {
-  color: rebeccapurple;
-  margin: 0;
+    color: rebeccapurple;
+    margin: 0;
 }
 
 .container {
-  max-width: 100%;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
 
-  @include breakpoint-up(sm) {
-    max-width: 500px;
-  }
-  @include breakpoint-up(md) {
-    max-width: 650px;
-  }
-  @include breakpoint-up(lg) {
-    max-width: 850px;
-  }
-  @include breakpoint-up(xl) {
-    max-width: 1050px;
-  }
-  @include breakpoint-up(xxl) {
-    max-width: 1200px;
-  }
+    @include breakpoint-up(sm) {
+        max-width: 500px;
+    }
+    @include breakpoint-up(md) {
+        max-width: 650px;
+    }
+    @include breakpoint-up(lg) {
+        max-width: 850px;
+    }
+    @include breakpoint-up(xl) {
+        max-width: 1050px;
+    }
+    @include breakpoint-up(xxl) {
+        max-width: 1200px;
+    }
 }
 
 .navigation {
-  height: 70px;
+    height: 70px;
 }
 
 .menu {
-  display: flex;
-  justify-content: space-between;
-  max-width: 600px;
-  width: 600px;
-  height: 100%;
-  margin: 0 0 0 auto;
-
-  &__item {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    width: 600px;
     height: 100%;
-    list-style: none;
-  }
-  &__link {
-    text-transform: uppercase;
-    height: 100%;
-    padding: 10px 20px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: color(menuText);
-    transition: 0.4s;
-    border-bottom: 3px solid transparent;
+    margin: 0 0 0 auto;
 
-    &:hover {
-      border-color: color(accent);
+    &__item {
+        height: 100%;
+        list-style: none;
     }
-  }
+    &__link {
+        text-transform: uppercase;
+        height: 100%;
+        padding: 10px 20px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: color(menuText);
+        transition: 0.4s;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+            border-color: color(accent);
+        }
+    }
 }
 
 .canvas {
-  position: absolute !important;
+    position: absolute !important;
+    pointer-events: none;
+}
+
+.landing-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-text {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    @include breakpoint-up(sm) {
+    }
+    @include breakpoint-up(md) {
+        font-size: 30px;
+    }
+    @include breakpoint-up(lg) {
+    }
 }
 
 .big-letters {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin: 70px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 70px;
+    pointer-events: none;
 
-  .big-letter {
-    font-size: 120px;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
+    .big-letter {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 40px;
+
+        @include breakpoint-up(sm) {
+            font-size: 60px;
+        }
+        @include breakpoint-up(md) {
+            font-size: 90px;
+        }
+        @include breakpoint-up(lg) {
+            font-size: 120px;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    padding: 50px 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    &__list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__element {
+    }
+
+    &__link {
+      padding: 0 0 0 20px;
+      display: inline-block;
+    }
+}
+
+.fa-envelope,
+.fa-github,
+.fa-linkedin {
+    color: white;
+}
+
+.page {
+  padding: 100px 0;
+}
+.presentation {
+
 }

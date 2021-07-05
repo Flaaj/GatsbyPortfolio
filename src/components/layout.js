@@ -13,11 +13,12 @@ import Header from "./header";
 import Sidebar from "./sidebar";
 import Main from "./main";
 import ThreeJsCanvas from "./threeJsCanvas";
-
+import Head from "./head";
+import Footer from "./footer";
 const Layout = ({ pageTitle, children }) => {
-    const [starlets, setStarlets] = useState(Array(100).fill({}));
     return (
         <>
+            <Head />
             <ThreeJsCanvas />
             <div className="page-wrapper">
                 <Header pageTitle={pageTitle} />
@@ -25,6 +26,7 @@ const Layout = ({ pageTitle, children }) => {
                     <Main>{children}</Main>
                     {/* <Sidebar /> */}
                 </div>
+                <Footer />
             </div>
         </>
     );
