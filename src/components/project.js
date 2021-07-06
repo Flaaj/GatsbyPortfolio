@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Project = ({
     name,
@@ -13,6 +13,8 @@ const Project = ({
             <div className="project__col">
                 <a href={link} target="_blank" className="project__link">
                     <img
+                        width="200"
+                        height="200"
                         src={thumbnail}
                         className="project__thumbnail"
                         alt=""
