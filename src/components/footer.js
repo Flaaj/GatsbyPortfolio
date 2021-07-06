@@ -14,7 +14,7 @@ const Footer = () => (
                         <i className="fas fa-envelope"></i>
                     </a>
                 </li>
-                <li className="social">
+                <li className="contact__element">
                     <a
                         href="https://linkedin.com/in/michal-wolek"
                         className="contact__link"
@@ -22,7 +22,7 @@ const Footer = () => (
                         <i className="fab fa-linkedin"></i>
                     </a>
                 </li>
-                <li className="social">
+                <li className="contact__element">
                     <a
                         href="https://github.com/flaaj"
                         className="contact__link"

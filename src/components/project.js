@@ -15,7 +15,7 @@ const Project = ({
                     <img
                         width="200"
                         height="200"
-                        src={thumbnail}
+                        src={"/" + thumbnail}
                         className="project__thumbnail"
                         alt=""
                     />
