@@ -21,8 +21,8 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="menu__item">
-          <Link to="/cv" className="menu__link">
-            CV
+          <Link to="/contact" className="menu__link">
+            Contact
           </Link>
         </li>
       </ul>

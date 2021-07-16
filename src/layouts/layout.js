@@ -5,16 +5,16 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { Link, useStaticQuery, graphql } from "gatsby";
 import "../styles/main.scss";
-import Header from "./header";
-import Sidebar from "./sidebar";
-import Main from "./main";
-import ThreeJsCanvas from "./threeJsCanvas";
-import Head from "./head";
-import Footer from "./footer";
+import Header from "../components/header";
+import Sidebar from "../components/sidebar";
+import Main from "../components/main";
+import ThreeJsCanvas from "../components/threeJsCanvas";
+import Head from "../components/head";
+import Footer from "../components/footer";
+
 const Layout = ({ pageTitle, children }) => {
     return (
         <>
