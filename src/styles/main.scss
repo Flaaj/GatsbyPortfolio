@@ -212,9 +212,17 @@ ul {
     padding: 100px 0;
     // background-color: rgba(white, 0.1);
 }
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 80px;
+    letter-spacing: 4px;
+}
 .presentation {
     text-align: justify;
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 1.75;
 }
 
 .projects__list {
@@ -223,12 +231,13 @@ ul {
 }
 
 .project {
-    display: flex;
+    // display: flex;
     min-height: 260px;
     margin-bottom: 50px;
-    background-color: rgba(white, 0.1);
+    // background-color: rgba(white, 0.1);
     border-radius: 10px;
     padding: 30px 0;
+    line-height: 1.5;
 
     &__col {
         height: 100%;
@@ -256,6 +265,8 @@ ul {
 
     &__description {
         margin-bottom: 20px;
+        font-size: 20px;
+        text-align: justify
     }
 
     &__row {
@@ -269,7 +280,7 @@ ul {
     }
 
     &__github {
-        color: white;
+        color: color(lightText)
     }
 }
 // .wrapper {
@@ -284,19 +295,27 @@ ul {
     width: 100%;
     font-size: 25px;
     // text-transform: uppercase;
-    color: white;
+    color: color(lightText);
     // font-weight: 900;
+    display: flex;
+    justify-content: center;
 
     .label {
         display: inline-block;
-        width: 100%;
-        text-align: center;
+        width: 30%;
+        text-align: right;
+        margin-right: 10px;
     }
     .link {
         display: inline-block;
-        width: 100%;
-        text-align: center;
-        color: white;
+        width: 70%;
+        text-align: left;
+        color: color(lightText);
         margin-bottom: 20px;
+
+        &:only-child {
+            width: 100%;
+            margin-left: calc(30% + 10px);
+        }
     }
 }

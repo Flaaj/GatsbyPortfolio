@@ -4,9 +4,9 @@ $colors: (
     main: #1b3e42,
     accent: #bbb,
     menuText:#eaa3a3,
-    lightText: white,
+    lightText: #e0dcdc,
     darkText: black,
-    bodyBg: black
+    bodyBg: rgb(27, 27, 27)
 );
 
 @function color($name) {

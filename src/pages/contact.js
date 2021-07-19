@@ -5,6 +5,7 @@ import Card from "../components/card";
 const Contact = () => {
     return (
         <Layout>
+            <h1 class="title">Here are some ways to contact me:</h1>
             <Card items={items} />
         </Layout>
     );

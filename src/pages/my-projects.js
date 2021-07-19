@@ -5,7 +5,7 @@ import Project from "../components/project";
 const AboutPage = () => (
     <Layout pageTitle="About Page">
         <div className="page projects-page">
-            <h2 className="page__title">My projects</h2>
+            <h2 className="title">My projects</h2>
             <p className="page__description">
                 Below I present some of the things I built to let you know about
                 the level of my current abilities. These projects are made
