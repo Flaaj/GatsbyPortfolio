@@ -7,11 +7,12 @@ CMS.init({
     config: {
         load_config_file: false,
         backend: {
-            name: "git-gateway",
+            name: "github",
             branch: "master",
+            repo: "Flaaj/GatsbyPortfolio",
         },
-        media_folder: "/static/img",
-        public_folder: "/img",
+        media_folder: "/content/media",
+        public_folder: "/public",
         collections: [pages],
     },
 });
