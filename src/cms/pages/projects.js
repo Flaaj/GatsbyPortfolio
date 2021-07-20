@@ -30,7 +30,7 @@ const project_fields = [
         required: true,
     },
     {
-        Label: "Technologies uses",
+        Label: "Technologies used",
         name: "technologies",
         widget: "string",
         required: true,
@@ -44,7 +44,7 @@ const projects = {
     fields: [
         {
             label: "Page Title",
-            name: "page_title",
+            name: "projects_page_title",
             widget: "string",
             required: true,
         },

@@ -22,7 +22,9 @@ export const query = graphql`
 const AboutPage = ({
     data: {
         markdownRemark: {
-            frontmatter: { list },
+            frontmatter: {
+                projects: { list },
+            },
         },
     },
 }) => {
