@@ -9,7 +9,7 @@ export const query = graphql`
             frontmatter {
                 list {
                     github_link
-                    project_descriptione
+                    project_description
                     project_link
                     thumbnail
                     technologies

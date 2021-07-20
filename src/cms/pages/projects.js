@@ -7,7 +7,7 @@ const project_fields = [
     },
     {
         Label: "Project description",
-        name: "project_descriptions",
+        name: "project_description",
         widget: "string",
         required: true,
     },
@@ -42,6 +42,12 @@ const projects = {
     label: "Projects",
     name: "projects",
     fields: [
+        {
+            label: "Page Title",
+            name: "page_title",
+            widget: "string",
+            required: true,
+        },
         {
             label: "list",
             name: "list",

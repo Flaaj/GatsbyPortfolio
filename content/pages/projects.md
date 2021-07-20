@@ -2,7 +2,7 @@
 list:
   - thumbnail: /public/calendar.png
     project_name: Watch Tuna
-    project_descriptione: This is an app written in React. It's purpose is to let
+    project_description: This is an app written in React. It's purpose is to let
       users schedule events or meetings, called 'reservations' in the app. You
       can add reservations, edit them, or remove. If more than one person is
       using the app, there is an option to quickly send messages that everybody
