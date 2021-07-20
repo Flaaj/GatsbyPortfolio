@@ -49,8 +49,8 @@ const projects = {
             required: true,
         },
         {
-            label: "list",
-            name: "list",
+            label: "Project list",
+            name: "project_list",
             widget: "list",
             fields: project_fields,
         },
