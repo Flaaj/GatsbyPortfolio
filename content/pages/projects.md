@@ -1,4 +1,5 @@
 ---
+page_title: My projects
 list:
   - thumbnail: /public/calendar.png
     project_name: Watch Tuna
