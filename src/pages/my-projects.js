@@ -3,31 +3,33 @@ import Layout from "../layouts/layout";
 import Project from "../components/project";
 import { graphql } from "gatsby";
 
-export const query = graphql`
-    query {
-        markdownRemark {
-            frontmatter {
-                list {
-                    github_link
-                    project_description
-                    project_link
-                    thumbnail
-                    technologies
-                    project_name
-                }
-            }
-        }
-    }
-`;
-const AboutPage = ({
-    data: {
-        markdownRemark: {
-            frontmatter: {
-                projects: { list },
-            },
-        },
-    },
-}) => {
+// export const query = graphql`
+//     query {
+//         markdownRemark {
+//             frontmatter {
+//                 list {
+//                     github_link
+//                     project_description
+//                     project_link
+//                     thumbnail
+//                     technologies
+//                     project_name
+//                 }
+//             }
+//         }
+//     }
+// `;
+const AboutPage = (
+//     {
+//     data: {
+//         markdownRemark: {
+//             frontmatter: {
+//                 projects: { list },
+//             },
+//         },
+//     },
+// }
+) => {
     console.log(list);
     return (
         <Layout pageTitle="About Page">
