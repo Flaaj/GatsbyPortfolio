@@ -1,4 +1,4 @@
-import projects from "@/cms/pages/projects";
+import projects from "./projects";
 
 const pages = {
     name: "pages",
