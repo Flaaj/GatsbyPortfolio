@@ -7,7 +7,7 @@ const project_fields = [
     },
     {
         Label: "Project description",
-        name: "project_descriptione",
+        name: "project_descriptions",
         widget: "string",
         required: true,
     },
