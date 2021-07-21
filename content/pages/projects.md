@@ -1,5 +1,8 @@
 ---
 projects_page_title: My projects
+projects_page_description: Below I present some of the things I built to let you
+  know about the level of my current abilities. These projects are made purely
+  for the purpose of training.
 project_list:
   - project_name: Calendar
     project_description: This is an app written in React. It's purpose is to let
