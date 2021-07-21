@@ -1,7 +1,9 @@
 import CMS from "netlify-cms-app";
 import pages from "./pages";
 import components from "./components";
-import { RichTextControl, RichTextPreview } from "netlify-cms-widget-richtext";
+
+import richText from "netlify-cms-widget-richtext";
+const {RichTextControl, RichTextPreview} = richText;
 
 window.CMS_MANUAL_INIT = true;
 
