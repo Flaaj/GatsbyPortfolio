@@ -18,4 +18,4 @@ CMS.init({
         collections: [pages, components],
     },
 });
-CMS.registerWidget("richtext", RichTextControl, RichTextPreview);
+// CMS.registerWidget("richtext", RichTextControl, RichTextPreview);
