@@ -5,7 +5,7 @@ import about from "./about";
 const pages = {
     name: "pages",
     label: "Pages",
-    fields: [projects, contact, about],
+    files: [projects, contact, about],
 };
 
 export default pages;
