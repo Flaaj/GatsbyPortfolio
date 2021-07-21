@@ -1,39 +1,36 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Layout from "../layouts/layout";
 import Project from "../components/project";
 import { graphql } from "gatsby";
 
-// export const query = graphql`
-//     query {
-//         markdownRemark {
-//             frontmatter {
-//                 list {
-//                     github_link
-//                     project_description
-//                     project_link
-//                     thumbnail
-//                     technologies
-//                     project_name
-//                 }
-//             }
-//         }
-//     }
-// `;
-const AboutPage = () => {
-    //     data: {
-    //         markdownRemark: {
-    //             frontmatter: {
-    //                 projects: { list, page_ },
-    //             },
-    //         },
-    //     },
-    // }
-    // {
-    // console.log(list);
+export const query = graphql`
+    query {
+        markdownRemark {
+            frontmatter {
+                project_list {
+                    github_link
+                    project_description
+                    project_link
+                    thumbnail
+                    technologies
+                    project_name
+                }
+                projects_page_title
+            }
+        }
+    }
+`;
+const AboutPage = ({
+    data: {
+        markdownRemark: {
+            frontmatter: { project_list, projects_page_title },
+        },
+    },
+}) => {
     return (
         <Layout pageTitle="About Page">
             <div className="page projects-page">
-                <h2 className="title">My projects</h2>
+                <h2 className="title">{projects_page_title}</h2>
                 <p className="page__description">
                     Below I present some of the things I built to let you know
                     about the level of my current abilities. These projects are
@@ -42,12 +39,12 @@ const AboutPage = () => {
                 <ul className="projects__list">
                     <li className="project__single">
                         <Project
-                            name="Calendar"
-                            thumbnail="calendar.png"
-                            link="https://flaaj-calendar.netlify.app/"
-                            githubLink="https://github.com/flaaj/calendar"
-                            description="This is an app written in React. It's purpose is to let users schedule events or meetings, called 'reservations' in the app. You can add reservations, edit them, or remove. If more than one person is using the app, there is an option to quickly send messages that everybody can read. The app also checks for closest free teems in or closest upcoming reservations, on which you can doubleclick, or tap in mobile version, and quickly move into the view of clicked reservation, or create a new one if you click on free term. In the original app there is an authentication and login screen with additional tab for personal settings in the sidebar, but I stripped them off from the portfolio version of the app for the sake of simplicity of the user that just wants to quickly look into the app"
-                            technologies="JavaScript, React, Redux, Sass, Firebase"
+                            name={project_list[0].project_name}
+                            thumbnail={project_list[0].thumbnail}
+                            link={project_list[0].project_link}
+                            githubLink={project_list[0].github_link}
+                            description={project_list[0].project_description}
+                            technologies={project_list[0].technologies}
                         />
                     </li>
                     <li className="project__single">

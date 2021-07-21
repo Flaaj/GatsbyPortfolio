@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 
 const Navigation = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);

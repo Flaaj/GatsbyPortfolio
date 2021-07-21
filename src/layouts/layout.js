@@ -9,7 +9,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/main.scss";
 import Header from "../components/header";
-import Sidebar from "../components/sidebar";
 import Main from "../components/main";
 import ThreeJsCanvas from "../components/threeJsCanvas";
 import Head from "../components/head";

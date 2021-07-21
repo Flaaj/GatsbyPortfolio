@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Project = ({
     name,
@@ -11,14 +11,18 @@ const Project = ({
     return (
         <div className="project">
             <h3 className="project__name">"{name}"</h3>
-            {/* <div className="project__row"> */}
             <div className="project__row">
                 <p className="project__description">
-                    <a href={link} target="_blank" className="project__link">
+                    <a
+                        href={link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project__link"
+                    >
                         <img
                             width="200"
                             height="200"
-                            src={"/" + thumbnail}
+                            src={thumbnail}
                             className="project__thumbnail"
                             alt=""
                         />
@@ -26,7 +30,6 @@ const Project = ({
                     {description}
                 </p>
             </div>
-            {/* <div className="project__col"> */}
             <div className="project__row">
                 <span className="project__label">Technologies: </span>
                 <p className="project__technologies">{technologies}</p>
@@ -36,13 +39,12 @@ const Project = ({
                 <a
                     href={githubLink}
                     target="_blank"
+                    rel="noreferrer"
                     className="project__github"
                 >
                     {githubLink.split("://")[1]}
                 </a>
             </div>
-            {/* </div> */}
-            {/* </div> */}
         </div>
     );
 };

@@ -11,8 +11,8 @@ CMS.init({
             branch: "master",
             repo: "Flaaj/GatsbyPortfolio",
         },
-        media_folder: "/content/media",
-        public_folder: "/public",
+        media_folder: "/static",
+        public_folder: "/",
         collections: [pages],
     },
 });
