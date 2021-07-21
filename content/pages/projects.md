@@ -17,5 +17,5 @@ project_list:
     project_link: https://flaaj-calendar.netlify.app/
     github_link: https://github.com/flaaj/calendar
     technologies: JavaScript, React, Redux, Sass, Firebase
-    thumbnail: /public/calendar.png
+    thumbnail: /calendar.png
 ---
