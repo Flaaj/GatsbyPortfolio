@@ -15,6 +15,12 @@ const about = {
             widget: "text",
             required: true,
         },
+        {
+            label: "Page Description Wysiwyg",
+            name: "about_wysiwyg",
+            widget: "richtext",
+            required: true,
+        },
     ],
 };
 
