@@ -21,7 +21,7 @@ const navigation = {
                 },
                 {
                     label: "Internal",
-                    name: "menu_item_link",
+                    name: "link_is_internal",
                     hint: "Does this link lead to this domain?",
                     widget: "boolean",
                     required: true,
