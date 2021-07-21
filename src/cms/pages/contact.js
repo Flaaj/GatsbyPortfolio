@@ -29,7 +29,7 @@ const contact = {
             label: "Page Title",
             name: "contact_page_title",
             widget: "string",
-            required: true,
+            required: false,
         },
         {
             label: "Page Description",
