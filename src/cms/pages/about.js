@@ -17,7 +17,7 @@ const about = {
         },
         {
             label: "Page Description Wysiwyg",
-            name: "about_wysiwyg",
+            name: "body",
             widget: "richtext",
             required: true,
         },
