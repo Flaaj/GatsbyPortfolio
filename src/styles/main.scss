@@ -119,6 +119,7 @@ a {
             background-color: white;
             border-radius: 2px;
             transition: 0.5s;
+            transform-origin: center left;
 
             &:not(:last-child) {
                 margin-bottom: 8px;
@@ -127,15 +128,14 @@ a {
 
         &.on {
             .ingredient {
-                transform-origin: center left;
                 &--top-bun {
-                    transform: rotate(45deg) scale(1.15, 1) 
+                    transform: rotate(45deg) scale(1.15, 1);
                 }
                 &--meat {
-                    transform: scale(0)
+                    transform: scale(0);
                 }
                 &--bottom-bun {
-                    transform: rotate(-45deg) scale(1.15, 1) 
+                    transform: rotate(-45deg) scale(1.15, 1);
                 }
             }
         }
@@ -188,7 +188,6 @@ a {
         color: color(menuText);
         transition: 0.4s;
         border-bottom: 3px solid transparent;
-        
 
         &:hover {
             border-color: color(accent);

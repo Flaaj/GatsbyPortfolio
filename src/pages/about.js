@@ -12,6 +12,17 @@ export const query = graphql`
         }
     }
 `;
+
+const AboutPageTemplate = props => {
+    const { title, text } = props;
+    return (
+        <div className="page about-page">
+            <h1 className="title">{title}</h1>
+            <p className="presentation">{text}</p>
+        </div>
+    );
+};
+
 const AboutPage = ({
     data: {
         markdownRemark: {
@@ -21,10 +32,7 @@ const AboutPage = ({
 }) => {
     return (
         <Layout pageTitle="About Page">
-            <div className="page about-page">
-                <h1 className="title">{about_page_title}</h1>
-                <p className="presentation">{about_text}</p>
-            </div>
+            <AboutPageTemplate title={about_page_title} text={about_text} />
         </Layout>
     );
 };

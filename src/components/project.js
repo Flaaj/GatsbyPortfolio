@@ -4,7 +4,7 @@ const Project = ({
     name,
     thumbnail,
     link,
-    githubLink,
+    github,
     description,
     technologies,
 }) => {
@@ -37,12 +37,12 @@ const Project = ({
             <div className="project__row">
                 <span className="project__label">Github: </span>
                 <a
-                    href={githubLink}
+                    href={github}
                     target="_blank"
                     rel="noreferrer"
                     className="project__github"
                 >
-                    {githubLink.split("://")[1]}
+                    {github.split("://")[1]}
                 </a>
             </div>
         </div>

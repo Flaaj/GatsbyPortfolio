@@ -1,13 +1,13 @@
 const project_fields = [
     {
         Label: "Project name",
-        name: "project_name",
+        name: "name",
         widget: "string",
         required: true,
     },
     {
         Label: "Project description",
-        name: "project_description",
+        name: "description",
         widget: "text",
         required: true,
     },
@@ -19,13 +19,13 @@ const project_fields = [
     },
     {
         Label: "Project link",
-        name: "project_link",
+        name: "link",
         widget: "string",
         required: true,
     },
     {
         Label: "Github link",
-        name: "github_link",
+        name: "github",
         widget: "string",
         required: true,
     },

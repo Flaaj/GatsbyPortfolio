@@ -12,7 +12,6 @@ import Header from "../components/header";
 import Main from "../components/main";
 import ThreeJsCanvas from "../components/threeJsCanvas";
 import Head from "../components/head";
-import Footer from "../components/footer";
 
 const Layout = ({ pageTitle, children }) => {
     return (
@@ -23,9 +22,7 @@ const Layout = ({ pageTitle, children }) => {
                 <Header pageTitle={pageTitle} />
                 <div className="container">
                     <Main>{children}</Main>
-                    {/* <Sidebar /> */}
                 </div>
-                <Footer />
             </div>
         </>
     );
