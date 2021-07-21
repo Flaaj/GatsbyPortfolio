@@ -5,6 +5,7 @@ import { RichTextControl, RichTextPreview } from "netlify-cms-widget-richtext";
 
 window.CMS_MANUAL_INIT = true;
 
+CMS.registerWidget("richtext", null, RichTextPreview);
 CMS.init({
     config: {
         load_config_file: false,
@@ -18,4 +19,3 @@ CMS.init({
         collections: [pages, components],
     },
 });
-// CMS.registerWidget("richtext", RichTextControl, RichTextPreview);
