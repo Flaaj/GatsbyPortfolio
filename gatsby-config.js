@@ -55,13 +55,6 @@ module.exports = {
                 path: `${__dirname}/content`,
             },
         },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `media`,
-                path: `${__dirname}/content/media`,
-            },
-        },
         `gatsby-transformer-remark`,
     ],
 };
