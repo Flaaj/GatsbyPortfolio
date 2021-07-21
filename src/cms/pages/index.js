@@ -1,5 +1,6 @@
 import projects from "./projects";
 import contact from "./contact";
+import about from "./about";
 
 const pages = {
     name: "pages",

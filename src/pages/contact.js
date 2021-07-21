@@ -4,53 +4,34 @@ import Card from "../components/card";
 import { graphql } from "gatsby";
 
 export const query = graphql`
-    query {
-        markdownRemark {
+    {
+        markdownRemark(fileAbsolutePath: { regex: "/pages/contact.md/" }) {
             frontmatter {
-                contact_page_title
                 contact_fields {
-                    contact_link_text
                     label
                     contact_link_url
+                    contact_link_text
                 }
+                contact_page_title
             }
         }
     }
 `;
 
-const Contact = ({data}) => {
-    console.log(data)
+const Contact = ({
+    data: {
+        markdownRemark: {
+            frontmatter: { contact_fields, contact_page_title },
+        },
+    },
+}) => {
     return (
         <Layout>
-            <h1 className="title">Here are some ways to contact me:</h1>
-            <Card items={items} />
+            <h1 className="title">{contact_page_title}</h1>
+            <Card items={contact_fields} />
         </Layout>
     );
 };
 
 export default Contact;
 
-const items = [
-    {
-        label: "Phone",
-        link: "tel: +48604606621",
-        text: "604 606 621",
-    },
-    {
-        label: "Email",
-        link: "mailto: michal.wolek96@gmail.com",
-        text: "michal.wolek96@gmail.com",
-    },
-    {
-        label: "LinkedIn",
-        link: "https://linkedin.com/in/michal-wolek",
-    },
-    {
-        label: "GitHub",
-        link: "https://github.com/flaaj/",
-    },
-    {
-        link: "/CV_Michal_Wolek.pdf",
-        text: "Get my CV",
-    },
-];

@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 
 export const query = graphql`
     query {
-        markdownRemark {
+        markdownRemark (fileAbsolutePath: { regex: "/pages/projects.md/" }) {
             frontmatter {
                 project_list {
                     github_link
