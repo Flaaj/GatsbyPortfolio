@@ -6,14 +6,14 @@ const Navigation = () => {
 
     return (
         <nav className="navigation">
-            <div
-                className="hamburger"
+            <button
+                className={"hamburger" + (showMobileMenu ? " on" : "")}
                 onClick={() => setShowMobileMenu(!showMobileMenu)}
             >
                 <div className="ingredient ingredient--top-bun"></div>
                 <div className="ingredient ingredient--meat"></div>
                 <div className="ingredient ingredient--bottom-bun"></div>
-            </div>
+            </button>
             <ul className={"menu" + (showMobileMenu ? " show" : "")}>
                 <li className="menu__item">
                     <Link to="/" className="menu__link">

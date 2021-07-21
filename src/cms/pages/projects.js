@@ -49,6 +49,12 @@ const projects = {
             required: true,
         },
         {
+            label: "Page Description",
+            name: "projects_page_description",
+            widget: "text",
+            required: true,
+        },
+        {
             label: "Project list",
             name: "project_list",
             widget: "list",

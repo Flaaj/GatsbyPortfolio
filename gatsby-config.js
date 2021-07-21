@@ -4,6 +4,9 @@ module.exports = {
         description: `This is my personal portfolio. Welcome :)`,
         author: `Michał Wołek`,
     },
+    flags: {
+        DEV_SSR: false,
+    },
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
