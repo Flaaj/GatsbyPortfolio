@@ -35,7 +35,6 @@ const items = [
     {
         link: "/CV_Michal_Wolek.pdf",
         text: "Get my CV",
-        download: true
     },
 
 ];

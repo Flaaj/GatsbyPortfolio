@@ -8,7 +8,7 @@ const contact_fields = [
     {
         Label: "Contact link url",
         name: "contact_link_url",
-        widget: "text",
+        widget: "string",
         required: true,
     },
     {
