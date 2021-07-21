@@ -1,8 +1,7 @@
 import CMS from "netlify-cms-app";
 import pages from "./pages";
 import components from "./components";
-import {RichTextControl, RichTextPreview} from 'netlify-cms-widget-richtext'
-CMS.registerWidget('richtext', RichTextControl, RichTextPreview)
+import { RichTextControl, RichTextPreview } from "netlify-cms-widget-richtext";
 
 window.CMS_MANUAL_INIT = true;
 
@@ -19,3 +18,4 @@ CMS.init({
         collections: [pages, components],
     },
 });
+CMS.registerWidget("richtext", RichTextControl, RichTextPreview);
