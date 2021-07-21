@@ -18,4 +18,17 @@ project_list:
     github_link: https://github.com/flaaj/calendar
     technologies: JavaScript, React, Redux, Sass, Firebase
     thumbnail: /calendar.png
+  - project_name: Watch Tuna
+    project_description: This is Watch Tuna, a web app that helps watch owners with
+      no professional tools to tune their watches or at least determine how much
+      their watches miss the actual time. It uses microphone to record the
+      soundwave of balance wheel, then seeks for peaks in the soundwave,
+      calculates frequency of ticking as accurately as possible, then compares
+      it to actual required frequency of a watch and calculates how many seconds
+      per day will the watch lose or gain.
+    thumbnail: /watchtuna.png
+    project_link: https://watch-tuna.web.app/tune
+    github_link: https://github.com/flaaj/watch-tuna-react
+    technologies: JavaScript, React, Sass, Firebase, sound wave filtering, peak
+      finding algorithm
 ---
