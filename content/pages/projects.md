@@ -31,4 +31,43 @@ project_list:
     github_link: https://github.com/flaaj/watch-tuna-react
     technologies: JavaScript, React, Sass, Firebase, sound wave filtering, peak
       finding algorithm
+  - project_name: Image search app
+    thumbnail: /imagesearch.png
+    project_description: This is the applet made while learning Angular, without
+      following any tutorial, using just offical Angular documentation and Stack
+      Overflow. I used Unsplash api to search for images, get the total amount
+      of pages with the search results, display clickable related searches and
+      display images in way that the next picture is always placed in the
+      shortest of 3 columns. Although It wasn't necessary here, because the app
+      is small and uncomplicated, I used Ngrx store for storing image addresses
+      and the informations about last query and amount of pages, for the purpose
+      of getting to know how to use Angular store.
+    technologies: JavaScript, Angular, Ngrx, sass, interacting with REST API
+    github_link: https://github.com/Flaaj/AngularImageSearch
+    project_link: https://flaaj-angularimagesearch.netlify.app/
+  - project_name: Best Shop
+    thumbnail: /bestshop.png
+    project_description: A responsive web page written using HTML, Sass for styling
+      and a little JavaScript. The page was recreated based on AdobeXD project
+      with almost pixel-perfect precision"
+    github_link: https://github.com/flaaj/bestshop
+    project_link: https://flaaj-bestshop.netlify.app/
+    technologies: HTML, Sass, Responsive Web Design, JavaScript
+  - project_name: Pathfinder
+    thumbnail: /pathfinder.png
+    project_description: A mini-game, where you can draw and remove walls on the
+      grid using your mouse to create a labirynth. Then, a demonstration of
+      breadth first search alrogithm in work is displayed and using this
+      algorithm, the shortest path between entrance (top left corner) and exit
+      (bottom right corner) is found. The elements are displayed using CSS Grid
+    github_link: https://github.com/flaaj/pathfinder
+    project_link: https://flaaj-pathfinder.netlify.app
+    technologies: HTML, CSS, CSS Grid, JavaScript (ES6), Depth first search algorithm
+  - project_name: Tetris
+    thumbnail: /tetris.png
+    project_description: A simple tetris game written in ES6, using canvas to
+      display the blocks. The game's little 'engine' was written by myself
+    technologies: HTML Canvas, Javascript
+    github_link: https://github.com/flaaj/tetris
+    project_link: https://flaaj-tetris.netlify.app/
 ---
