@@ -8,7 +8,7 @@ const project_fields = [
     {
         Label: "Project description",
         name: "project_description",
-        widget: "string",
+        widget: "text",
         required: true,
     },
     {
