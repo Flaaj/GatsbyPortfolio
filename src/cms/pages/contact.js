@@ -3,7 +3,7 @@ const contact_fields = [
         Label: "Label",
         name: "label",
         widget: "string",
-        required: true,
+        required: false,
     },
     {
         Label: "Contact link url",
@@ -29,7 +29,7 @@ const contact = {
             label: "Page Title",
             name: "contact_page_title",
             widget: "string",
-            required: false,
+            required: true,
         },
         {
             label: "Page Description",
