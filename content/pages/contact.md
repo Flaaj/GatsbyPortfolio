@@ -1,5 +1,5 @@
 ---
-contact_page_title: "Here are some ways to contact me:"
+contact_page_title: "Here are some of the ways to contact me:"
 contact_fields:
   - label: Phone
     contact_link_url: "tel: +48604606621"
