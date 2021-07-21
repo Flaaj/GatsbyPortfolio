@@ -52,7 +52,7 @@ const projects = {
             label: "Page Description",
             name: "projects_page_description",
             widget: "text",
-            required: true,
+            required: false,
         },
         {
             label: "Project list",

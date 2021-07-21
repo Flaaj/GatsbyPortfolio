@@ -16,6 +16,7 @@ export const query = graphql`
                     project_name
                 }
                 projects_page_title
+                projects_page_description
             }
         }
     }
@@ -23,7 +24,11 @@ export const query = graphql`
 const AboutPage = ({
     data: {
         markdownRemark: {
-            frontmatter: { project_list, projects_page_title },
+            frontmatter: {
+                project_list,
+                projects_page_title,
+                projects_page_description,
+            },
         },
     },
 }) => {
@@ -32,11 +37,7 @@ const AboutPage = ({
         <Layout pageTitle="About Page">
             <div className="page projects-page">
                 <h2 className="title">{projects_page_title}</h2>
-                <p className="page__description">
-                    Below I present some of the things I built to let you know
-                    about the level of my current abilities. These projects are
-                    made purely for the purpose of training.
-                </p>
+                <p className="page__description">{projects_page_description}</p>
                 <ul className="projects__list">
                     {project_list.map(
                         ({
