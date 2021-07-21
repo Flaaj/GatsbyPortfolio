@@ -15,5 +15,5 @@ contact_fields:
     contact_link_text: github.com/flaaj/
   - contact_link_url: /CV_Michal_Wolek.pdf
     contact_link_text: Get my CV
-    label: adsas
+    label: ""
 ---
