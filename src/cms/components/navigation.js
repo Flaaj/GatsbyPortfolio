@@ -1,5 +1,5 @@
 const navigation = {
-    file: "content/pages/navigation.md",
+    file: "content/components/navigation.md",
     label: "Menu",
     name: "navigation",
     fields: [
