@@ -1,9 +1,9 @@
 import navigation from "./navigation"
 
-const pages = {
-    name: "pages",
-    label: "Pages",
+const components = {
+    label: "Components",
+    name: "components",
     files: [navigation],
 };
 
-export default pages;
+export default components;
