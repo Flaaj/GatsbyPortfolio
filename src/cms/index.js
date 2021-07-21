@@ -3,11 +3,11 @@ import pages from "./pages";
 import components from "./components";
 
 import richText from "netlify-cms-widget-richtext";
-const {RichTextControl, RichTextPreview} = richText;
+const {Control, Preview} = richText;
 
 window.CMS_MANUAL_INIT = true;
 
-CMS.registerWidget("richtext", RichTextControl, RichTextPreview);
+CMS.registerWidget("richtext", Control, Preview);
 CMS.init({
     config: {
         load_config_file: false,
