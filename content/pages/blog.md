@@ -19,4 +19,6 @@ posts:
     date: 2021-07-22T10:46:46.327Z
     title: Witam wszystkich
     author: Flaaj
+    featured: /wallpaperflare.com_wallpaper.jpg
+    slug: pierwszy-post
 ---
