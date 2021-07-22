@@ -44,23 +44,18 @@ exports.createPages = async ({ graphql, actions }) => {
         const mdFileName = post.title.toLowerCase().replace(/ /g, "-");
         const mdFilePath = `${postMarkdownsUrl}/${mdFileName}.md`;
 
-        console.log(`\n\n\n\n` + mdFileName + `\n`);
-
         fs.openSync(mdFilePath, "w+");
 
         fs.writeFileSync(mdFilePath, ``);
-
         fs.appendFileSync(mdFilePath, `---\n`);
 
         Object.entries(post).forEach(([key, value]) => {
             if (key === "body") return;
 
             const line = `${key}: ${value}\n`;
-
-            console.log(`${line}\n`);
-
             fs.appendFileSync(mdFilePath, line);
         });
+
         fs.appendFileSync(mdFilePath, `---\n\n`);
         fs.appendFileSync(mdFilePath, post.body);
     });

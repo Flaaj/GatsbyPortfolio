@@ -15,6 +15,18 @@ const blog = {
                     required: true,
                 },
                 {
+                    label: "Slug",
+                    name: "slug",
+                    widget: "string",
+                    required: true,
+                },
+                {
+                    label: "Featured Image",
+                    name: "featured",
+                    widget: "image",
+                    required: true,
+                },
+                {
                     label: "Author's name",
                     name: "author",
                     widget: "string",
@@ -27,7 +39,7 @@ const blog = {
                     required: true,
                 },
                 {
-                    label: "Page Description Wysiwyg",
+                    label: "Content",
                     name: "body",
                     widget: "markdown",
                     required: true,
