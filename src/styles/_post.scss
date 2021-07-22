@@ -1,3 +1,12 @@
 .featured-image {
     width: 100%;
 }
+
+.post-info-wrapper {
+    display: flex;
+    margin: 20px 0;
+    .post-info,
+    .divider {
+        margin-right: 10px;
+    }
+}

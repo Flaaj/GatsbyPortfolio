@@ -3,6 +3,7 @@ title: Jeszcze jeden post
 slug: jeszcze-jeden-post
 author: Michał
 featured: /3130382.jpg
+featured_alt: Drzewo Teldrassil
 date: 2021-07-22T12:38:33.156Z
 ---
 

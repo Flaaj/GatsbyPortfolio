@@ -49,7 +49,7 @@ const Star = ({ position }) => {
     return (
         <mesh position={position} ref={mesh}>
             <sphereGeometry attach="geometry" args={[0.02, 10, 10]} />
-            <meshStandardMaterial color={"yellow"} />
+            <meshStandardMaterial color={"grey"} />
         </mesh>
     );
 };

@@ -3,6 +3,7 @@ title: Kolejny post
 slug: kolejny-post
 author: Flaaj
 featured: /1098428.jpg
+featured_alt: Statki na morzu
 date: 2021-07-22T11:53:49.991Z
 ---
 

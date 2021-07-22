@@ -28,9 +28,14 @@ const PostTemplate = ({ post }) => {
             <article className="blog-post">
                 <h1 className="title">{post.title}</h1>
                 <GatsbyImage image={post.image} alt="Hello Responsive Pic" />
-                <div className="post-info">
-                    <small>Author: {post.author}</small>
-                    <small>Published: {post.date}</small>
+                <div className="post-info-wrapper">
+                    <small className="post-info publish-date">
+                        Published: {post.date.split("T")[0]}
+                    </small>
+                    <span className="divider">|</span>
+                    <small className="post-info author">
+                        Author: {post.author}
+                    </small>
                 </div>
                 <div
                     className="content"

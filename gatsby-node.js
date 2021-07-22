@@ -37,8 +37,12 @@ exports.createPages = async ({ graphql, actions }) => {
                         featured_alt
                         date
                         body
-                        tags
-                        categories
+                        tags {
+                            name
+                        }
+                        categories {
+                            name
+                        }
                     }
                 }
             }
@@ -59,6 +63,7 @@ exports.createPages = async ({ graphql, actions }) => {
         Object.entries(post).forEach(([key, value]) => {
             if (key === "body") return;
             if (key === "tags" || key === "categories") {
+                console.log(value);
             } else {
                 const line = `${key}: ${value}\n`;
                 fs.appendFileSync(mdFilePath, line);

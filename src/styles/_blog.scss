@@ -7,19 +7,39 @@
     width: 100%;
     flex-shrink: 0;
     transition: 0.4s;
+    padding-top: calc(100% * 9 / 16);
+    position: relative;
+
     @include breakpoint-up(md) {
+        padding-top: calc(50% * 9 / 16);
         width: 50%;
     }
     @include breakpoint-up(xl) {
         width: 33.33%;
+        padding-top: calc(33.33% * 9 / 16);
+    }
+
+    .aspect-ratio-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
     }
     &__link {
         position: relative;
         display: block;
+        height: 100%;
     }
     &__title {
         color: white;
         transition: 0.4s;
+    }
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
     }
 
     &__content {

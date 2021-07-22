@@ -3,6 +3,7 @@ title: Witam wszystkich
 slug: witam-wszystkich
 author: Flaaj
 featured: /wallpaperflare.com_wallpaper.jpg
+featured_alt: Las z Azeroth
 date: 2021-07-22T10:46:46.327Z
 ---
 
