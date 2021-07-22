@@ -6,7 +6,7 @@ posts:
       ![landing page](/bestshop.png "One of my first landing pages coded")
 
       sdfdfsfsdfsdfsfd
-    post_title: My first landing page
+    post_title: My first post
     body: |-
       sfdsdfsdfsdfsdffsdfsd
 
