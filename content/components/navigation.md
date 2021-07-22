@@ -12,7 +12,7 @@ menu_items:
   - menu_item_name: Contact
     menu_item_link: /contact
     link_is_internal: true
-  - menu_item_name: Blog`
+  - menu_item_name: Blog
     menu_item_link: /blog
     link_is_internal: false
 ---
