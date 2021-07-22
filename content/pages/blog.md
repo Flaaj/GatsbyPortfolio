@@ -1,16 +1,21 @@
 ---
 posts:
-  - content: |-
-      sdf
-
-      ![landing page](/bestshop.png "One of my first landing pages coded")
-
-      sdfdfsfsdfsdfsfd
-    post_title: My first post
+  - title: My first post
     body: |-
       sfdsdfsdfsdfsdffsdfsd
 
       ![sdfsdfssdf](/bestshop.png "sdfsdfsdfsdfsdfsdfsfsfsdfsdf")
 
       sdfsdfsdfsd**fsdfsdfsdfsdfsfsfsf**dsdf
+    author: Michal
+    date: 2021-07-22
+  - title: My second post
+    body: |-
+      sfdsdfsdfsdfsdffsdfsd
+
+      ![sdfsdfssdf](/bestshop.png "sdfsdfsdfsdfsdfsdfsfsfsdfsdf")
+
+      sdfsdfsdfsd**fsdfsdfsdfsdfsfsfsf**dsdf
+    author: Michal
+    date: 2021-07-22
 ---
