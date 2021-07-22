@@ -65,4 +65,6 @@ posts:
       consequatur, nemo eum explicabo dolores veniam ullam debitis expedita modi
       laboriosam ex quidem. Eius, numquam blanditiis."
     featured_alt: Zadowolona z życia kobieta
+    categories:
+      - name: Random
 ---
