@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import Layout from "../layouts/layout";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export const queryThisPostData = graphql`
     query BlogQuery($slug: String!, $featured: String!) {
@@ -10,16 +10,13 @@ export const queryThisPostData = graphql`
             frontmatter {
                 title
                 slug
-                featured
                 author
                 date
             }
         }
         file(relativePath: { regex: $featured }) {
             childImageSharp {
-                fluid(maxWidth: 1400) {
-                    ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData
             }
         }
     }
@@ -30,7 +27,7 @@ const PostTemplate = ({ post }) => {
         <div className="page post-page">
             <article className="blog-post">
                 <h1 className="title">{post.title}</h1>
-                <Img fluid={post.fluid} alt="Hello Responsive Pic" />
+                <GatsbyImage image={post.image} alt="Hello Responsive Pic" />
                 <div className="post-info">
                     <small>Author: {post.author}</small>
                     <small>Published: {post.date}</small>
@@ -43,11 +40,11 @@ const PostTemplate = ({ post }) => {
         </div>
     );
 };
+
 const Post = ({ data }) => {
-    console.log(data);
     const body = data.markdownRemark.html;
-    const fluid = data.file.childImageSharp.fluid;
-    const post = { ...data.markdownRemark.frontmatter, body, fluid };
+    const image = data.file.childImageSharp.gatsbyImageData;
+    const post = { ...data.markdownRemark.frontmatter, body, image };
     return (
         <Layout pageTitle="Post Page">
             <PostTemplate post={post} />

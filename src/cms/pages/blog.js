@@ -27,6 +27,12 @@ const blog = {
                     required: true,
                 },
                 {
+                    label: "Featured Image Alternative Text",
+                    name: "featured_alt",
+                    widget: "string",
+                    required: true,
+                },
+                {
                     label: "Author's name",
                     name: "author",
                     widget: "string",

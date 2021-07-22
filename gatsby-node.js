@@ -34,8 +34,11 @@ exports.createPages = async ({ graphql, actions }) => {
                         slug
                         author
                         featured
+                        featured_alt
                         date
                         body
+                        tags
+                        categories
                     }
                 }
             }
@@ -55,9 +58,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
         Object.entries(post).forEach(([key, value]) => {
             if (key === "body") return;
-
-            const line = `${key}: ${value}\n`;
-            fs.appendFileSync(mdFilePath, line);
+            if (key === "tags" || key === "categories") {
+            } else {
+                const line = `${key}: ${value}\n`;
+                fs.appendFileSync(mdFilePath, line);
+            }
         });
 
         fs.appendFileSync(mdFilePath, `---\n\n`);
@@ -90,7 +95,7 @@ exports.createPages = async ({ graphql, actions }) => {
             component: path.resolve(`./src/templates/post.js`),
             context: {
                 slug: node.fields.slug,
-                featured: `${node.frontmatter.featured}/`
+                featured: `${node.frontmatter.featured}/`,
             },
         });
     });
