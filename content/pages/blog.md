@@ -7,4 +7,10 @@ posts:
 
       sdfdfsfsdfsdfsfd
     post_title: My first landing page
+    body: |-
+      sfdsdfsdfsdfsdffsdfsd
+
+      ![sdfsdfssdf](/bestshop.png "sdfsdfsdfsdfsdfsdfsfsfsdfsdf")
+
+      sdfsdfsdfsdfsdfsdfsdfsdfsfsfsfdsdf
 ---
