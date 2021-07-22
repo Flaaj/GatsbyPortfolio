@@ -72,6 +72,9 @@ exports.createPages = async ({ graphql, actions }) => {
             ) {
                 edges {
                     node {
+                        frontmatter {
+                            featured
+                        }
                         fields {
                             slug
                         }
@@ -87,6 +90,7 @@ exports.createPages = async ({ graphql, actions }) => {
             component: path.resolve(`./src/templates/post.js`),
             context: {
                 slug: node.fields.slug,
+                featured: `${node.frontmatter.featured}/`
             },
         });
     });

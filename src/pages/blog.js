@@ -1,7 +1,6 @@
 import * as React from "react";
 import Layout from "../layouts/layout";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import Markdown from "react-markdown";
 
 export const query = graphql`
     query {
@@ -37,7 +36,6 @@ const BlogPageTemplate = () => {
                             </div>
                             <img src={post.featured} alt="" />
                         </Link>
-                        {/* <Markdown children={"bod"} allowDangerousHtml /> */}
                     </article>
                 ))}
             </div>

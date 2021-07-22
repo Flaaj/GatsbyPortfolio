@@ -1,9 +1,10 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import Layout from "../layouts/layout";
+import Img from "gatsby-image";
 
 export const queryThisPostData = graphql`
-    query BlogQuery($slug: String!) {
+    query BlogQuery($slug: String!, $featured: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             html
             frontmatter {
@@ -14,6 +15,13 @@ export const queryThisPostData = graphql`
                 date
             }
         }
+        file(relativePath: { regex: $featured }) {
+            childImageSharp {
+                fluid(maxWidth: 1400) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
 `;
 
@@ -22,12 +30,7 @@ const PostTemplate = ({ post }) => {
         <div className="page post-page">
             <article className="blog-post">
                 <h1 className="title">{post.title}</h1>
-                <img
-                    className="featured-image"
-                    // TODO: add featured image alt to netlify
-                    alt=""
-                    src={post.featured}
-                />
+                <Img fluid={post.fluid} alt="Hello Responsive Pic" />
                 <div className="post-info">
                     <small>Author: {post.author}</small>
                     <small>Published: {post.date}</small>
@@ -41,8 +44,10 @@ const PostTemplate = ({ post }) => {
     );
 };
 const Post = ({ data }) => {
+    console.log(data);
     const body = data.markdownRemark.html;
-    const post = { ...data.markdownRemark.frontmatter, body };
+    const fluid = data.file.childImageSharp.fluid;
+    const post = { ...data.markdownRemark.frontmatter, body, fluid };
     return (
         <Layout pageTitle="Post Page">
             <PostTemplate post={post} />
