@@ -44,12 +44,7 @@ posts:
 
       To see working examples of all of the built-in widgets, try making a 'Kitchen Sink' collection item on the [CMS demo site](https://cms-demo.netlify.com/). (No login required: click the login button and the CMS will open.) You can refer to the demo [configuration code](https://github.com/netlify/netlify-cms/blob/master/dev-test/config.yml) to see how each field was configured.
     featured_alt: Drzewo Teldrassil
-  - date: 2021-07-22T14:11:30.208Z
-    title: I jeszcze jeden post
-    slug: i-jeszcze-jeden-post
-    featured: /zadowolona-z-zycia-kobieta.jpg
-    author: Michał
-    body: "# Lorem ipsum XD\r
+  - body: "# Lorem ipsum XD\r
 
       \r
 
@@ -64,7 +59,14 @@ posts:
       deserunt omnis voluptates incidunt perspiciatis neque? In autem sit
       consequatur, nemo eum explicabo dolores veniam ullam debitis expedita modi
       laboriosam ex quidem. Eius, numquam blanditiis."
+    author: Michał
+    slug: i-jeszcze-jeden-post
+    featured: /zadowolona-z-zycia-kobieta.jpg
+    date: 2021-07-22T14:11:30.208Z
     featured_alt: Zadowolona z życia kobieta
+    title: I jeszcze jeden post
+    tags:
+      - name: hello
     categories:
       - name: Random
 ---
