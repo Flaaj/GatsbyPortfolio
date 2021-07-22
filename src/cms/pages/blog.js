@@ -44,6 +44,32 @@ const blog = {
                     widget: "markdown",
                     required: true,
                 },
+                {
+                    label: "Categories",
+                    name: "categories",
+                    widget: "list",
+                    fields: [
+                        {
+                            label: "Category name",
+                            name: "name",
+                            widget: "string",
+                            required: true
+                        }
+                    ]
+                },
+                {
+                    label: "Tags",
+                    name: "tags",
+                    widget: "list",
+                    fields: [
+                        {
+                            label: "Tag name",
+                            name: "name",
+                            widget: "string",
+                            required: true
+                        }
+                    ]
+                },
             ],
         },
     ],

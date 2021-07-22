@@ -31,6 +31,10 @@ exports.createPages = async ({ graphql, actions }) => {
                 frontmatter {
                     posts {
                         title
+                        slug
+                        author
+                        featured
+                        date
                         body
                     }
                 }

@@ -1,39 +1,54 @@
 import * as React from "react";
 import Layout from "../layouts/layout";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import Markdown from "react-markdown";
 
-// export const query = graphql`
-//     query {
-//         markdownRemark(fileAbsolutePath: { regex: "/pages/blog.md/" }) {
-//             frontmatter {
-//                 posts {
-//                     post_title
-//                     body
-//                 }
-//             }
-//         }
-//     }
-// `;
+export const query = graphql`
+    query {
+        markdownRemark(fileAbsolutePath: { regex: "/pages/blog.md/" }) {
+            frontmatter {
+                posts {
+                    title
+                    slug
+                    featured
+                }
+            }
+        }
+    }
+`;
 
-// const BlogPageTemplate = ({ title, body }) => {
-//     return (
-//         <div className="page blog-page">
-//             <h1 className="title">{title}</h1>
-//             <article className="blog-post">
-//                 <Markdown children={body} allowDangerousHtml />
-//             </article>
-//         </div>
-//     );
-// };
+const BlogPageTemplate = () => {
+    const results = useStaticQuery(query);
+    const posts = results.markdownRemark.frontmatter.posts;
+    console.log(posts);
+    return (
+        <div className="page blog-page">
+            <div className="posts">
+                {posts.map(post => (
+                    <article className="post-thumbnail">
+                        <Link
+                            className="post-thumbnail__link"
+                            to={`${__dirname}${post.slug}`}
+                        >
+                            <div className="post-thumbnail__content">
+                                <h1 className="post-thumbnail__title">
+                                    {post.title}
+                                </h1>
+                            </div>
+                            <img src={post.featured} alt="" />
+                        </Link>
+                        {/* <Markdown children={"bod"} allowDangerousHtml /> */}
+                    </article>
+                ))}
+            </div>
+        </div>
+    );
+};
 
 const BlogPage = () => {
     return (
         <Layout pageTitle="blog Page">
-            {/* <BlogPageTemplate
-                title={posts[0].post_title}
-                body={posts[0].body}
-            /> */}
+            <BlogPageTemplate />
         </Layout>
     );
 };

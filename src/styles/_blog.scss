@@ -1,0 +1,44 @@
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-thumbnail {
+    width: 100%;
+    flex-shrink: 0;
+    transition: 0.4s;
+    @include breakpoint-up(md) {
+        width: 50%;
+    }
+    @include breakpoint-up(xl) {
+        width: 33.33%;
+    }
+    &__link {
+        position: relative;
+        display: block;
+    }
+    &__title {
+        color: white;
+        transition: 0.4s;
+    }
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+
+        &:hover {
+            background: rgba(black, 0.3);
+
+            .post-thumbnail__title {
+                color: rgb(134, 134, 134);
+            }
+        }
+    }
+}

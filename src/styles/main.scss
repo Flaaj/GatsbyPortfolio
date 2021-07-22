@@ -1,5 +1,7 @@
 @import "breakpoints";
 @import "colors";
+@import "post";
+@import "blog";
 
 * {
     box-sizing: border-box;
@@ -33,6 +35,10 @@ ul {
 
 a {
     word-break: break-all;
+}
+
+img {
+    max-width: 100%;
 }
 
 .page-wrapper {
