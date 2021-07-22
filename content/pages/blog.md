@@ -12,5 +12,5 @@ posts:
 
       ![sdfsdfssdf](/bestshop.png "sdfsdfsdfsdfsdfsdfsfsfsdfsdf")
 
-      sdfsdfsdfsdfsdfsdfsdfsdfsfsfsfdsdf
+      sdfsdfsdfsd**fsdfsdfsdfsdfsfsfsf**dsdf
 ---
