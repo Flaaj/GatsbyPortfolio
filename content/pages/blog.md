@@ -9,6 +9,7 @@ posts:
     slug: witam-wszystkich
     featured: /wallpaperflare.com_wallpaper.jpg
     date: 2021-07-22T10:46:46.327Z
+    featured_alt: Las z Azeroth
     title: Witam wszystkich
     content: |-
       sdf
@@ -24,6 +25,7 @@ posts:
     author: Flaaj
     body: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt laboriosam nesciunt nisi, illum necessitatibus quas iusto iste vero possimus optio? Tempore inventore iure beatae soluta consequatur necessitatibus, architecto veritatis distinctio rerum! Fuga quas accusantium, nam nulla ex cumque provident reprehenderit? Velit similique quis magnam non unde perspiciatis blanditiis facere dolor quod optio officiis explicabo, ex nulla mollitia dolore tempora nemo sed totam enim voluptatibus a! Delectus beatae minima sequi veritatis magnam rerum, exercitationem fugit commodi repellat magni, quaerat neque unde harum? Neque necessitatibus dignissimos ipsa assumenda ex asperiores voluptatibus porro numquam voluptatum voluptas. Voluptate similique facere delectus, consequatur placeat cupiditate.
     slug: kolejny-post
+    featured_alt: Statki na morzu
   - date: 2021-07-22T12:38:33.156Z
     title: Jeszcze jeden post
     slug: jeszcze-jeden-post
@@ -41,6 +43,7 @@ posts:
 
 
       To see working examples of all of the built-in widgets, try making a 'Kitchen Sink' collection item on the [CMS demo site](https://cms-demo.netlify.com/). (No login required: click the login button and the CMS will open.) You can refer to the demo [configuration code](https://github.com/netlify/netlify-cms/blob/master/dev-test/config.yml) to see how each field was configured.
+    featured_alt: Drzewo Teldrassil
   - date: 2021-07-22T14:11:30.208Z
     title: I jeszcze jeden post
     slug: i-jeszcze-jeden-post
@@ -61,4 +64,7 @@ posts:
       deserunt omnis voluptates incidunt perspiciatis neque? In autem sit
       consequatur, nemo eum explicabo dolores veniam ullam debitis expedita modi
       laboriosam ex quidem. Eius, numquam blanditiis."
+    featured_alt: Zadowolona z życia kobieta
+    categories:
+      - name: Random
 ---
