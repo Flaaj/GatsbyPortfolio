@@ -33,14 +33,14 @@ const Star = ({ position }) => {
             mesh.current.position.x =
                 mesh.current.position.x + 0.001 < 15
                     ? mesh.current.position.x +
-                      (Math.sin(mesh.current.t) * 0.3) / 500 +
-                      mesh.current.speed / 500
+                      (Math.sin(mesh.current.t) * 0.3) / 1000 +
+                      mesh.current.speed / 1000
                     : -15;
             mesh.current.position.y =
                 mesh.current.position.y + 0.001 < 15
                     ? mesh.current.position.y +
-                      (Math.cos(mesh.current.t) * 0.3) / 500 +
-                      mesh.current.speed / 500
+                      (Math.cos(mesh.current.t) * 0.3) / 1000 +
+                      mesh.current.speed / 1000
                     : -15;
         } catch(err) {
             console.log(err)

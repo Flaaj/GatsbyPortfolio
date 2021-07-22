@@ -2,12 +2,13 @@ import CMS from "netlify-cms-app";
 import pages from "./pages";
 import components from "./components";
 
-import { Control as RichTextControl, Preview as RichTextPreview } from "netlify-cms-widget-richtext";
-// const {RichTextControl, RichTextPreview} = richText;
-
+import "netlify-cms-widget-richtext";
+setTimeout(() => {
+    console.log(window.RichTextControl);
+}, 5000);
 window.CMS_MANUAL_INIT = true;
 
-CMS.registerWidget("richtext", RichTextControl, RichTextPreview);
+CMS.registerWidget("richtext", window.RichTextControl, window.RichTextPreview);
 CMS.init({
     config: {
         load_config_file: false,
