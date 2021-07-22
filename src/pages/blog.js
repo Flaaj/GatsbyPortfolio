@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../layouts/layout";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import PostThumbnail from "../components/post-thumbnail";
 
 const query = graphql`
