@@ -16,7 +16,7 @@ export const queryThisPostData = graphql`
         }
         file(relativePath: { regex: $featured }) {
             childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(quality: 100)
             }
         }
     }

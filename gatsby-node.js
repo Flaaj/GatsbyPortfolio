@@ -24,7 +24,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-    const postMarkdownsUrl = `${__dirname}/src/blog`;
+    const { createPage } = actions;
+
+    const postMarkdownsUrl = `${__dirname}/content/posts`;
+
     const postsQuery = await graphql(`
         query {
             markdownRemark(fileAbsolutePath: { regex: "/pages/blog.md/" }) {
@@ -74,11 +77,10 @@ exports.createPages = async ({ graphql, actions }) => {
         fs.appendFileSync(mdFilePath, post.body);
     });
 
-    const { createPage } = actions;
     const result = await graphql(`
         query {
             allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/src/blog/" } }
+                filter: { fileAbsolutePath: { regex: "/content/posts/" } }
             ) {
                 edges {
                     node {
@@ -103,5 +105,14 @@ exports.createPages = async ({ graphql, actions }) => {
                 featured: `${node.frontmatter.featured}/`,
             },
         });
+    });
+
+    createPage({
+        path: `/blog/`,
+        component: path.resolve(`./src/templates/blog.js`),
+        context: {
+            slug: `/blog/`,
+            postFeaturedImages: posts.map(post => post.featured),
+        },
     });
 };

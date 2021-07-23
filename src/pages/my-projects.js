@@ -32,7 +32,6 @@ const AboutPage = ({
         },
     },
 }) => {
-    console.log(project_list);
     return (
         <Layout pageTitle="My projects">
             <div className="page projects-page">
