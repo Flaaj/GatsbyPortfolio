@@ -22,6 +22,8 @@ const contact_fields = [
 
 const contact = {
     file: "content/pages/contact.md",
+    public_folder: "",
+    media_folder: "",
     label: "Contact",
     name: "contact",
     fields: [

@@ -2,6 +2,8 @@ const about = {
     file: "content/pages/about.md",
     label: "About",
     name: "about",
+    public_folder: "",
+    media_folder: "",
     fields: [
         {
             label: "Page Title",

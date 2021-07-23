@@ -39,6 +39,8 @@ const project_fields = [
 
 const projects = {
     file: "content/pages/projects.md",
+    public_folder: "",
+    media_folder: "",
     label: "Projects",
     name: "projects",
     fields: [
