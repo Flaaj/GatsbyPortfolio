@@ -28,13 +28,13 @@ project_list:
       calculates frequency of ticking as accurately as possible, then compares
       it to actual required frequency of a watch and calculates how many seconds
       per day will the watch lose or gain.
-    thumbnail: /watchtuna.png
+    thumbnail: watchtuna.png
     link: https://watch-tuna.web.app/tune
     github: https://github.com/flaaj/watch-tuna-react
     technologies: JavaScript, React, Sass, Firebase, sound wave filtering, peak
       finding algorithm
   - name: Image search app
-    thumbnail: /imagesearch.png
+    thumbnail: imagesearch.png
     description: This is the applet made while learning Angular, without following
       any tutorial, using just offical Angular documentation and Stack Overflow.
       I used Unsplash api to search for images, get the total amount of pages
@@ -48,7 +48,7 @@ project_list:
     github: https://github.com/Flaaj/AngularImageSearch
     link: https://flaaj-angularimagesearch.netlify.app/
   - name: Best Shop
-    thumbnail: /bestshop.png
+    thumbnail: bestshop.png
     description: A responsive web page written using HTML, Sass for styling and a
       little JavaScript. The page was recreated based on AdobeXD project with
       almost pixel-perfect precision"
@@ -56,7 +56,7 @@ project_list:
     link: https://flaaj-bestshop.netlify.app/
     technologies: HTML, Sass, Responsive Web Design, JavaScript
   - name: Pathfinder
-    thumbnail: /pathfinder.png
+    thumbnail: pathfinder.png
     description: A mini-game, where you can draw and remove walls on the grid using
       your mouse to create a labirynth. Then, a demonstration of breadth first
       search alrogithm in work is displayed and using this algorithm, the
@@ -66,7 +66,7 @@ project_list:
     link: https://flaaj-pathfinder.netlify.app
     technologies: HTML, CSS, CSS Grid, JavaScript (ES6), Depth first search algorithm
   - name: Tetris
-    thumbnail: /tetris.png
+    thumbnail: tetris.png
     description: A simple tetris game written in ES6, using canvas to display the
       blocks. The game's little 'engine' was written by myself
     technologies: HTML Canvas, Javascript
