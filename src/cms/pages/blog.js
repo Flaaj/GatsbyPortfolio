@@ -1,7 +1,7 @@
 const blog = {
     file: "content/pages/blog.md",
-    public_folder: "content/posts/",
-    media_folder: "content/posts/",
+    public_folder: "../posts/",
+    media_folder: "../posts/",
     label: "Blog",
     name: "blog",
     fields: [
