@@ -5,7 +5,7 @@ import PostThumbnail from "../components/post-thumbnail";
 import { CompressedPixelFormat } from "three";
 
 export const query = graphql`
-    query ($featured: [String]!) {
+    query {
         markdownRemark(fileAbsolutePath: { regex: "/pages/blog.md/" }) {
             frontmatter {
                 posts {
