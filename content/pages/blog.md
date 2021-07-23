@@ -67,6 +67,10 @@ posts:
     title: I jeszcze jeden post
     tags:
       - name: hello
+      - name: Tag1
+      - name: Tag2
     categories:
       - name: Random
+      - name: Category1
+      - name: Category2
 ---
