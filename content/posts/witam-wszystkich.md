@@ -2,9 +2,11 @@
 title: Witam wszystkich
 slug: witam-wszystkich
 author: Flaaj
-featured: content/posts/wentylatory_07_07_2021.jpg
+featured: ./1098428.jpg
 featured_alt: Las z Azeroth
 date: 2021-07-22T10:46:46.327Z
+tags: null
+categories: 
 ---
 
 # Lorem ipsum XD

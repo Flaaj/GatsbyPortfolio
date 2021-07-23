@@ -1,10 +1,3 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const path = require("path");
 const fs = require("fs");
@@ -26,7 +19,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
-    const postMarkdownsUrl = `${__dirname}/content/posts`;
+    const postMarkdownsFolderUrl = `${__dirname}/content/posts`;
 
     const postsQuery = await graphql(`
         query {
@@ -36,7 +29,10 @@ exports.createPages = async ({ graphql, actions }) => {
                         title
                         slug
                         author
-                        featured
+                        featured {
+                            name
+                            extension
+                        }
                         featured_alt
                         date
                         body
@@ -56,7 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     posts.forEach(post => {
         const mdFileName = post.title.toLowerCase().replace(/ /g, "-");
-        const mdFilePath = `${postMarkdownsUrl}/${mdFileName}.md`;
+        const mdFilePath = `${postMarkdownsFolderUrl}/${mdFileName}.md`;
 
         fs.openSync(mdFilePath, "w+");
 
@@ -65,8 +61,15 @@ exports.createPages = async ({ graphql, actions }) => {
 
         Object.entries(post).forEach(([key, value]) => {
             if (key === "body") return;
-            if (key === "tags" || key === "categories") {
-                console.log(value);
+            if ((key === "tags" || key === "categories") && value) {
+                const list = value.map(item => item.name);
+                const line = `${key}: ${list}\n`;
+                fs.appendFileSync(mdFilePath, line);
+            } else if (key === "featured") {
+                const { name, extension } = value;
+                const image = `./${name}.${extension}`;
+                const line = `${key}: ${image}\n`;
+                fs.appendFileSync(mdFilePath, line);
             } else {
                 const line = `${key}: ${value}\n`;
                 fs.appendFileSync(mdFilePath, line);
@@ -85,7 +88,10 @@ exports.createPages = async ({ graphql, actions }) => {
                 edges {
                     node {
                         frontmatter {
-                            featured
+                            featured {
+                                name
+                                extension
+                            }
                         }
                         fields {
                             slug
@@ -97,22 +103,16 @@ exports.createPages = async ({ graphql, actions }) => {
     `);
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const { name, extension } = node.frontmatter.featured;
+        const featured = `/${name}.${extension}/`;
         createPage({
             path: node.fields.slug,
             component: path.resolve(`./src/templates/post.js`),
             context: {
                 slug: node.fields.slug,
-                featured: `${node.frontmatter.featured}/`,
+                pageType: "post",
+                featured,
             },
         });
-    });
-
-    createPage({
-        path: `/blog/`,
-        component: path.resolve(`./src/templates/blog.js`),
-        context: {
-            slug: `/blog/`,
-            postFeaturedImages: posts.map(post => post.featured),
-        },
     });
 };

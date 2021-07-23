@@ -1,8 +1,7 @@
 import * as React from "react";
 import Layout from "../layouts/layout";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import PostThumbnail from "../components/post-thumbnail";
-import { CompressedPixelFormat } from "three";
 
 export const query = graphql`
     query {
@@ -11,7 +10,12 @@ export const query = graphql`
                 posts {
                     title
                     slug
-                    featured
+                    featured {
+                        childImageSharp {
+                            gatsbyImageData(quality: 10)
+                        }
+                    }
+                    featured_alt
                 }
             }
         }
@@ -30,7 +34,7 @@ const BlogPageTemplate = ({ posts }) => {
     );
 };
 
-const BlogPage = ({ data, pageContext }) => {
+const BlogPage = ({ data }) => {
     const posts = data.markdownRemark.frontmatter.posts;
 
     return (

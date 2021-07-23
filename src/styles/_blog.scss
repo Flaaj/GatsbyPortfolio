@@ -52,6 +52,7 @@
         justify-content: center;
         align-items: center;
         transition: 0.4s;
+        z-index: 2;
 
         &:hover {
             background: rgba(black, 0.3);

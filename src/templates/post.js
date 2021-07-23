@@ -12,11 +12,12 @@ export const queryThisPostData = graphql`
                 slug
                 author
                 date
+                featured_alt
             }
         }
         file(relativePath: { regex: $featured }) {
             childImageSharp {
-                gatsbyImageData(quality: 100)
+                gatsbyImageData(quality: 100, jpgOptions: { progressive: true })
             }
         }
     }
@@ -27,7 +28,7 @@ const PostTemplate = ({ post }) => {
         <div className="page post-page">
             <article className="blog-post">
                 <h1 className="title">{post.title}</h1>
-                <GatsbyImage image={post.image} alt="Hello Responsive Pic" />
+                <GatsbyImage image={post.image} alt={post.featured_alt} />
                 <div className="post-info-wrapper">
                     <small className="post-info publish-date">
                         Published: {post.date.split("T")[0]}

@@ -2,9 +2,11 @@
 title: I jeszcze jeden post
 slug: i-jeszcze-jeden-post
 author: Michał
-featured: /zadowolona-z-zycia-kobieta.jpg
+featured: ./zadowolona-z-zycia-kobieta.jpg
 featured_alt: Zadowolona z życia kobieta
 date: 2021-07-22T14:11:30.208Z
+tags: hello,Tag1,Tag2
+categories: Random,Category1,Category2
 ---
 
 # Lorem ipsum XD

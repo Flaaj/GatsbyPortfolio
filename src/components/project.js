@@ -1,4 +1,5 @@
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Project = ({
     name,
@@ -12,27 +13,36 @@ const Project = ({
         <div className="project">
             <h3 className="project__name">"{name}"</h3>
             <div className="project__row">
-                <p className="project__description">
+                <div className="project__description">
                     <a
                         href={link}
                         target="_blank"
                         rel="noreferrer"
                         className="project__link"
                     >
-                        <img
-                            width="200"
-                            height="200"
-                            src={thumbnail}
+                        <GatsbyImage
+                            image={thumbnail}
                             className="project__thumbnail"
-                            alt=""
+                            alt={name + " app screenshot"}
                         />
                     </a>
                     {description}
-                </p>
+                </div>
             </div>
             <div className="project__row">
                 <span className="project__label">Technologies: </span>
                 <p className="project__technologies">{technologies}</p>
+            </div>
+            <div className="project__row">
+                <span className="project__label">Project link: </span>
+                <a
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project__github"
+                >
+                    {link.split("://")[1]}
+                </a>
             </div>
             <div className="project__row">
                 <span className="project__label">Github: </span>

@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const PostThumbnail = ({ post }) => {
-    // const result = useStaticQuery()
     return (
         <article className="post-thumbnail">
             <div className="aspect-ratio-wrapper">
@@ -13,10 +13,10 @@ const PostThumbnail = ({ post }) => {
                     <div className="post-thumbnail__content">
                         <h1 className="post-thumbnail__title">{post.title}</h1>
                     </div>
-                    <img
+                    <GatsbyImage
                         className="post-thumbnail__image"
-                        src={post.featured}
-                        alt=""
+                        image={post.featured.childImageSharp.gatsbyImageData}
+                        alt={post.featured_alt}
                     />
                 </Link>
             </div>

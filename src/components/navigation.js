@@ -10,7 +10,6 @@ const query = graphql`
                 menu_items {
                     menu_item_name
                     menu_item_link
-                    link_is_internal
                 }
             }
         }
@@ -35,7 +34,7 @@ const Navigation = () => {
             </button>
             <ul className={"menu" + (showMobileMenu ? " show" : "")}>
                 {menuItems.map(
-                    ({ menu_item_name, menu_item_link, link_is_internal }) => (
+                    ({ menu_item_name, menu_item_link }) => (
                         <li key={menu_item_name} className="menu__item">
                             <Link to={menu_item_link} className="menu__link">
                                 {menu_item_name}

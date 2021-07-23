@@ -11,7 +11,11 @@ export const query = graphql`
                     link
                     description
                     github
-                    thumbnail
+                    thumbnail {
+                        childImageSharp {
+                            gatsbyImageData
+                        }
+                    }
                     technologies
                     name
                 }
@@ -50,7 +54,7 @@ const AboutPage = ({
                             <li className="project__single" key={name}>
                                 <Project
                                     name={name}
-                                    thumbnail={thumbnail}
+                                    thumbnail={thumbnail.childImageSharp.gatsbyImageData}
                                     link={link}
                                     github={github}
                                     description={description}

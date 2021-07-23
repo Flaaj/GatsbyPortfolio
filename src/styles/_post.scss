@@ -10,3 +10,9 @@
         margin-right: 10px;
     }
 }
+
+.blog-post {
+    .content {
+        word-break: break-all;
+    }
+}
