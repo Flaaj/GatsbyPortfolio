@@ -2,17 +2,73 @@
     width: 100%;
 }
 
-.post-info-wrapper {
-    display: flex;
-    margin: 20px 0;
-    .post-info,
-    .divider {
+.post {
+    &__head {
+        position: relative;
+    }
+
+    &__title {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        z-index: 1;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: -3px !important;
+        font-weight: 100;
+    }
+
+    &__featured {
+        filter: brightness(50%);
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    &__date {
         margin-right: 10px;
     }
-}
 
-.blog-post {
-    .content {
-        word-break: break-all;
+    &__content {
+        padding: 20px 0;
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.2;
+            width: 100%;
+            word-break: normal;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: white;
+            transition: 0.3s;
+
+            &:hover {
+                color: burlywood;
+            }
+        }
+
+        code {
+            background-color: rgba(white, 0.86);
+            color: black;
+            padding: 0px 5px;
+            border-radius: 2px;
+            // display: block;
+            margin: 5px 5px;
+        }
     }
 }

@@ -25,21 +25,26 @@ export const queryThisPostData = graphql`
 
 const PostTemplate = ({ post }) => {
     return (
-        <div className="page post-page">
-            <article className="blog-post">
-                <h1 className="title">{post.title}</h1>
-                <GatsbyImage image={post.image} alt={post.featured_alt} />
-                <div className="post-info-wrapper">
-                    <small className="post-info publish-date">
-                        Published: {post.date.split("T")[0]}
-                    </small>
-                    <span className="divider">|</span>
-                    <small className="post-info author">
-                        Author: {post.author}
-                    </small>
+        <div className="page page--post">
+            <article className="post">
+                <div className="post__head">
+                    <h1 className="post__title title">{post.title}</h1>
+                    <GatsbyImage
+                        className="post__featured"
+                        image={post.image}
+                        alt={post.featured_alt}
+                    />
+                    <div className="post__info">
+                        <small className="post__date">
+                            Published: {post.date.split("T")[0]}
+                        </small>
+                        <small className="post__author">
+                            Author: {post.author}
+                        </small>
+                    </div>
                 </div>
                 <div
-                    className="content"
+                    className="post__content"
                     dangerouslySetInnerHTML={{ __html: post.body }}
                 />
             </article>
